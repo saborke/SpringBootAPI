@@ -33,5 +33,9 @@ public class EmployeeController {
 	public void deleteAll(){
 		ser.deleteAll();
 	}
+	@GetMapping("/")
+	public String home() {
+		return "Welcome home";
+	}
 
 }
