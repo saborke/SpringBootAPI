@@ -27,5 +27,8 @@ public class EmployeeService {
 	public void deleteAll() {
 	entityManager.createNativeQuery("drop table employeetable").executeUpdate();
 	}
+	public Employee getEmpId(int id) {
+		return repo.findById((long) id).orElse(new Employee());
+	}
 
 }
