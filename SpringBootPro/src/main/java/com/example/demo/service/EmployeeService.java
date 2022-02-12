@@ -28,7 +28,7 @@ public class EmployeeService {
 	entityManager.createNativeQuery("drop table employeetable").executeUpdate();
 	}
 	public Employee getEmpId(int id) {
-		return repo.findById((long) id).orElse(new Employee());
+		return repo.findById(id).orElse(new Employee());
 	}
 
 }
